@@ -28,7 +28,7 @@ public class CustomerController {
 	  }
 	
 	
-	@RequestMapping(value = "/webhook", method = RequestMethod.GET)
+	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
 	private Map<String,Object> webhook() throws JSONException {
 		
 		Map<String,Object> json = new HashMap<String,Object>();
