@@ -37,7 +37,7 @@ public class CustomerController {
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
 		json.put( "source", "apiai-onlinestore-shipping");
-		System.out.println(json);
+		System.out.println("***************************************************************** "+json);
 		return json;
 
 	}
