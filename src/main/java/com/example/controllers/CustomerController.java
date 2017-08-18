@@ -47,12 +47,15 @@ public class CustomerController {
 //	}
 	
 	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
-	private  @ResponseBody Map<String,Object> webhook(@RequestBody String obj) throws JSONException {
+	private  @ResponseBody Map<String,Object> webhook(@RequestBody Map<String,Object>   obj) throws JSONException {
 		
 		
 		
 		Map<String,Object> json = new HashMap<String,Object>();
 		
+		
+		
+		String Speech ="The cost of shipping to  is  for "+((JSONObject) ((JSONObject) obj.get("result")).get("parameters")).get("shipping-zone");
 		 json.put("speech", " The cost of shipping to  is  1000 euros.");
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
