@@ -53,9 +53,9 @@ public class CustomerController {
 		
 		Map<String,Object> json = new HashMap<String,Object>();
 		
+	
 		
-		
-		String Speech ="The cost of shipping to  is  for "+((JSONObject) ((JSONObject) obj.get("result")).get("parameters")).get("shipping-zone");
+		String Speech ="The cost of shipping to  is  for "+obj.get("result");
 		 json.put("speech", " The cost of shipping to  is  1000 euros.");
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
