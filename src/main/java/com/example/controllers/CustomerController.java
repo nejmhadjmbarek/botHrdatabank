@@ -47,7 +47,7 @@ public class CustomerController {
 //	}
 	
 	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
-	private  @ResponseBody Map<String,Object> webhook(@RequestBody JSONObject   obj) throws JSONException {
+	private  @ResponseBody Map<String,Object> webhook(@RequestBody Map<String,Object>   obj) throws JSONException {
 		
 		
 		
@@ -55,12 +55,12 @@ public class CustomerController {
 		
 	
 		
-		String Speech ="The cost of shipping to  is  for "+obj;
+		String Speech ="The cost of shipping to  is  for "+obj.get("result");
 		 json.put("speech", " The cost of shipping to  is  1000 euros.");
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
 		json.put( "source", "apiai-onlinestore-shipping");
-		System.out.println("************* ******************"+obj);
+		System.out.println("************* ******************"+obj.get("result"));
 		return json;
 
 	}
