@@ -43,22 +43,22 @@ public class CustomerController {
 		return json;
 
 	}
-	
-	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
-	private Map<String,Object> webhook() throws JSONException {
-		
-		
-		
-		Map<String,Object> json = new HashMap<String,Object>();
-		
-		 json.put("speech", " The cost of shipping to  is  1000 euros.");
-		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
-		 
-		json.put( "source", "apiai-onlinestore-shipping");
-		System.out.println("************* ******************"+json);
-		return json;
-
-	}
+//	
+//	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
+//	private Map<String,Object> webhook() throws JSONException {
+//		
+//		
+//		
+//		Map<String,Object> json = new HashMap<String,Object>();
+//		
+//		 json.put("speech", " The cost of shipping to  is  1000 euros.");
+//		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
+//		 
+//		json.put( "source", "apiai-onlinestore-shipping");
+//		System.out.println("************* ******************"+json);
+//		return json;
+//
+//	}
 	
 	
 }
